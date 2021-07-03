@@ -16,21 +16,12 @@ data.head(10)
 # --------------
 #Code starts here
 
-
-
-
-
 data['Better_Event']=np.where(data['Total_Summer']>data['Total_Winter'],'Summer',np.where(data['Total_Summer']==data['Total_Winter'],'Both','Winter'))
 better_event=data['Better_Event'].value_counts().idxmax()
 print(better_event)
 
-
-
 # --------------
 #Code starts here
-
-
-
 
 
 top_countries = data [['Country_Name','Total_Summer', 'Total_Winter','Total_Medals']]
@@ -103,6 +94,7 @@ l=plt.legend()
 l.get_texts()[0].set_text('Gold_Total :' + str(best['Gold_Total'].values))
 l.get_texts()[1].set_text('Silver_Total :' + str(best['Silver_Total'].values))
 l.get_texts()[2].set_text('Bronze_Total :' + str(best['Bronze_Total'].values))
+
 
 
 
